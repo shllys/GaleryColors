@@ -5,12 +5,19 @@ body {
   place-items: center;
 }
 
+.container {
+  display: flex;
+  position: relative;
+}
 .container .caja1 {
   display: flex;
-  height: 589px;
+  height: 543px;
   width: 717px;
   background: linear-gradient(30deg, #89c7b8 20%, #55716a 60%);
   border-radius: 15px;
+  z-index: 2;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.7s ease-in;
 }
 .container .caja1 .columOne {
   display: flex;
@@ -55,8 +62,8 @@ body {
 .container .caja1 .columOne .tock {
   padding: 10px 20px;
   width: 60%;
-  margin-top: 4rem;
-  margin-left: 30px;
+  margin-top: 3rem;
+  margin-left: 25px;
   border: none;
   border-radius: 15px;
   font-size: 2rem;
@@ -71,7 +78,7 @@ body {
 }
 .container .caja1 .hr {
   background-color: rgba(0, 0, 0, 0.5019607843);
-  height: 530px;
+  height: 480px;
   width: 1px;
   margin: 30px 15px 30px 20px;
 }
@@ -79,6 +86,24 @@ body {
   font-size: 2rem;
   margin: 40px 0;
 }
+.container .caja1 .columTwo .bi {
+  color: #000;
+  cursor: pointer;
+}
+.container .active {
+  transform: translateX(-20%);
+}
 .container .caja2 {
-  display: none;
+  background-color: #89c7b8;
+  height: 510px;
+  width: 317px;
+  position: absolute;
+  right: 0;
+  top: 17px;
+  border-radius: 0 15px 15px 0;
+  z-index: 1;
+  transition: all 0.7s ease-in;
+}
+.container .activeTwo {
+  transform: translateX(54%);
 }/*# sourceMappingURL=styles.css.map */

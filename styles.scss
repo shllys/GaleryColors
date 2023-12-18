@@ -8,12 +8,18 @@ body {
 }
 
 .container {
+  display: flex;
+  position: relative;
+
   .caja1 {
     display: flex;
-    height: 589px;
+    height: 543px;
     width: 717px;
     background: linear-gradient(30deg, #89c7b8 20%, #55716a 60%);
     border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    transition: all .7s ease-in;
 
     .columOne {
       display: flex;
@@ -60,8 +66,8 @@ body {
       .tock {
         padding: 10px 20px;
         width: 60%;
-        margin-top: 4rem;
-        margin-left: 30px;
+        margin-top: 3rem;
+        margin-left: 25px;
         border: none;
         border-radius: 15px;
         font-size: 2rem;
@@ -78,17 +84,37 @@ body {
     }
     .hr {
       background-color: #00000080;
-      height: 530px;
+      height: 480px;
       width: 1px;
       margin: 30px 15px 30px 20px;
     }
     .columTwo {
       font-size: 2rem;
       margin: 40px 0;
+
+      .bi {
+        color: #000;
+        cursor: pointer;
+      }
     }
+  }
+  .active {
+    transform: translateX(-20%);
   }
 
   .caja2 {
-    display: none;
+    // display: none;
+    background-color: #89c7b8;
+    height: 510px;
+    width: 317px;
+    position: absolute;
+    right: 0;
+    top: 17px;
+    border-radius: 0 15px 15px 0;
+    z-index: 1;
+    transition: all .7s ease-in;
+  }
+  .activeTwo {
+    transform: translateX(54%);
   }
 }

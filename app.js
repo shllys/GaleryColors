@@ -20,3 +20,14 @@ btn.addEventListener('click', () => {
     hex.style.backgroundColor = llamarColor;
     ventana.style.backgroundColor = llamarColor;
 })
+
+// -------------------------------------
+
+const menu = document.getElementById('menu')
+const cajaOne = document.querySelector('.caja1')
+const cajaTwo = document.querySelector('.caja2')
+
+menu.addEventListener('click', () => {
+    cajaOne.classList.toggle('active');
+    cajaTwo.classList.toggle('activeTwo');
+})
