@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
 
 body {
-  height: 100vh;
+  height: 90vh;
+  box-sizing: border-box;
 
   display: grid;
   place-items: center;
@@ -113,6 +114,50 @@ body {
     border-radius: 0 15px 15px 0;
     z-index: 1;
     transition: all .7s ease-in;
+
+    .galeria {
+      text-align: center;
+      font-family: "Rubik Scribble";
+      font-size: 2rem;
+      margin: 10px 40px 0 40px;
+      border-bottom: #000 2px solid;
+
+    }
+    .history {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 9px 5px;
+      height: 27.5rem;
+      overflow: auto;
+
+
+      &::-webkit-scrollbar {
+        background-color: #73a8a5;
+        width: 10px;
+        border-radius: 30px;
+      }
+
+      .caja {
+        margin: 5px 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        
+        .historia {
+          height: 50px;
+          width: 100px;
+          border-radius: 15px;
+        }
+        .texthex {
+          text-align: center;
+          margin: 5px 0;
+        }
+      }
+      .borrar {
+        display: none;
+      }
+    }
   }
   .activeTwo {
     transform: translateX(54%);
