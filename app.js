@@ -22,7 +22,6 @@ btn.addEventListener('click', () => {
 })
 
 
-
 // -------------------------------------
 
 const menu = document.getElementById('menu')
@@ -46,23 +45,37 @@ function copic() {
 
 // ---------------------------------------------
 
-const heart = document.getElementById("like");
 
 function like() {
     let guardar = copic()
+    let trash = `<i class="bi bi-trash"></i>`
 
     let historia = document.createElement('div')
     historia.style.background = guardar;
     historia.className = "historia";
+    historia.insertAdjacentHTML("beforeend", trash);
 
     let textHistoria = document.createElement('p');
     textHistoria.innerHTML = guardar;
     textHistoria.className = "texthex";
 
     let caja = document.createElement('div');
+    caja.id = 'caja-' + Math.floor(Math.random() * 15);
     caja.append(historia);
     caja.append(textHistoria);
     caja.classList = 'caja';
+    
+    const borrar = document.querySelector('.history');
+    borrar.addEventListener('click', () => {
+        let contenido = document.getElementById(caja.id);
+        contenido.remove(caja.id)
+    });
+
+    // const borrar = document.querySelector('.history')
+    // borrar.addEventListener('click', () => {
+    //     let contenido = document.getElementById(caja.id);
+    //     contenido.remove(borrar)
+    // });
 
     const elements = document.querySelector('.history')
     elements.append(caja);
@@ -70,9 +83,15 @@ function like() {
 
 // ----------------------------------
 
-const remove = document.querySelector('.history');
+// function deleteCaja() {
+//     let contenido = document.querySelectorAll('.caja');
+//     contenido.forEach(function(div) {
+//         div.remove()
+//     })
+// }
 
-remove.addEventListener('click', () => {
-    let contenido = document.querySelector('.caja');
-    contenido.remove(remove)
-});
+// remove.addEventListener('click', () => {
+//     deleteCaja();
+// })
+
+
