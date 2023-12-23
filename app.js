@@ -44,7 +44,7 @@ function copic() {
     
 
 // ---------------------------------------------
-
+let numeroCaja = 0;
 
 function like() {
     let guardar = copic()
@@ -60,25 +60,21 @@ function like() {
     textHistoria.className = "texthex";
 
     let caja = document.createElement('div');
-    caja.id = 'caja-' + Math.floor(Math.random() * 15);
+    caja.id = 'caja-' + numeroCaja;
+    numeroCaja++;
     caja.append(historia);
     caja.append(textHistoria);
     caja.classList = 'caja';
     
-    const borrar = document.querySelector('.history');
-    borrar.addEventListener('click', () => {
-        let contenido = document.getElementById(caja.id);
-        contenido.remove(caja.id)
-    });
-
-    // const borrar = document.querySelector('.history')
-    // borrar.addEventListener('click', () => {
-    //     let contenido = document.getElementById(caja.id);
-    //     contenido.remove(borrar)
-    // });
-
     const elements = document.querySelector('.history')
     elements.append(caja);
+    
+    const borrar = document.getElementById(caja.id);
+    borrar.addEventListener('click', () => {
+        let contenido = document.getElementById(caja.id);
+        contenido.remove()
+    });
+
 }
 
 // ----------------------------------
