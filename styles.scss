@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
 
 body {
-  height: 90vh;
+  height: 100vh;
   box-sizing: border-box;
 
   display: grid;
   place-items: center;
+  background: linear-gradient(30deg, #96aca6 20%, #b5e7da 60%);
+  background-repeat: no-repeat;
 }
 
 .container {
